@@ -1,0 +1,17 @@
+{
+  "name": "clojure-lsp-marketplace",
+  "owner": {
+    "name": "Tommi Kyntola",
+    "email": "tommi.kyntola@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "clojure-lsp",
+      "description": "clojure-lsp code intelligence (diagnostics, go-to-definition, find-references) for .clj/.cljs/.cljc/.edn/.bb",
+      "version": "0.1.0",
+      "source": "./plugins/clojure-lsp",
+      "category": "development",
+      "strict": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "clojure-lsp": {
+    "command": "clojure-lsp",
+    "extensionToLanguage": {
+      ".clj": "clojure",
+      ".cljs": "clojurescript",
+      ".cljc": "clojure",
+      ".edn": "clojure",
+      ".bb": "clojure"
+    },
+    "startupTimeout": 300000
+  }
+}
