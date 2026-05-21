@@ -6,12 +6,18 @@ single plugin (`clojure-lsp`) wiring up
 intelligence (diagnostics, go-to-definition, find-references, hover) on
 Clojure projects.
 
+![Claude using clojure-lsp to rename a function across the project](./lspdemo.png)
+
+Above: Claude calling the LSP's `findReferences` rather than grepping, then
+renaming all three call sites across two namespaces in one shot.
+
 ## Quick install
 
 ```bash
 # 1. Make sure the clojure-lsp binary is on PATH
-brew install clojure-lsp/brew/clojure-lsp-native     # macOS
-# or: bash < <(curl -s https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install)
+brew install clojure-lsp/brew/clojure-lsp-native                                                # macOS
+# or, on Linux:
+curl -s https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install | sudo bash
 
 # 2. Add this marketplace and install the plugin
 claude plugin marketplace add Kynde/clojure-lsp-plugin
@@ -33,6 +39,7 @@ clojure-lsp-plugin/
 │       │   └── plugin.json       # plugin manifest
 │       ├── .lsp.json             # LSP server config
 │       └── README.md
+├── lspdemo.png                   # screenshot embedded in this README
 ├── INSTALLATION.md
 └── README.md
 ```

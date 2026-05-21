@@ -17,20 +17,31 @@ Two layers:
 
 The plugin **does not** ship the language server. Install it on PATH.
 
-```bash
-# macOS
-brew install clojure-lsp/brew/clojure-lsp-native
+#### macOS
 
-# Linux (Fedora and friends) — official installer script
-bash < <(curl -s https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install)
+```bash
+brew install clojure-lsp/brew/clojure-lsp-native
 ```
 
-Verify:
+#### Linux
+
+```bash
+# Official installer — drops the native binary into /usr/local/bin (needs sudo)
+curl -s https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install | sudo bash
+
+# Or, install into ~/.local/bin without sudo
+curl -s https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install | bash -s -- --dir "$HOME/.local/bin"
+```
+
+#### Verify (both platforms)
 
 ```bash
 clojure-lsp --version
 # expected: "clojure-lsp <date>" and "clj-kondo <version>"
 ```
+
+If you get `command not found`, your install directory isn't on `PATH` —
+add it to your shell rc and reopen the shell.
 
 ### 2. Register this repository as a Claude Code marketplace
 
