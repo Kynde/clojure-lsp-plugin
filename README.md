@@ -24,6 +24,14 @@ claude plugin marketplace add Kynde/clojure-lsp-plugin
 claude plugin install clojure-lsp@clojure-lsp-marketplace
 ```
 
+**3. Verify** — open Claude Code in any Clojure project (one with a
+`deps.edn`, `project.clj`, or `bb.edn`) and run `/plugin`. The Installed
+tab should list `clojure-lsp` as enabled and the Errors tab should be
+empty. Then ask Claude something the LSP can answer, e.g. *"Find every
+caller of `<some.ns>/<some-fn>` in this codebase."* — the first such
+request kicks off indexing (a couple of minutes on a large project), then
+it's instant.
+
 See **[INSTALLATION.md](./INSTALLATION.md)** for the full walk-through
 (host-wide vs. per-project setup, verification, updating, uninstall).
 
